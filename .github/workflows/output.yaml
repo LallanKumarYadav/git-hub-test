@@ -7,5 +7,5 @@ jobs:
       - name: Print Context
         run: | 
             echo 'github Context'
-            echo "{{ toJSON(github) }}"
+            echo "${{ toJSON(github) }}"
 
