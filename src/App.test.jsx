@@ -27,6 +27,6 @@ describe('App', () => {
 
     expect(screen.getByRole('link', { name: /explore vite/i })).toHaveAttribute('href', 'https://vite.dev/')
     expect(screen.getByRole('link', { name: /learn more/i })).toHaveAttribute('href', 'https://react.dev/')
-    expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute('href', 'https://github.com/vitejs/vite')
+    expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute('href', 'https://github.com/vitejs/vite1')
   })
 })
