@@ -1,0 +1,11 @@
+name: Test HG Action output
+on : [workflow_dispatch]
+jobs:
+  show-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Context
+        run: | 
+            echo 'github Context'
+            echo "{{ toJSON(github) }}"
+
