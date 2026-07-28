@@ -56,6 +56,6 @@ jobs:
       - name: Output the downloaded files
         run: ls -l dist
       - name: Output the script file name
-        run: echo "Script file name: ${{ needs.build-code-job.outputs.script-file }}"  
+        run: echo 'Script file name: ${{ needs.build-code-job.outputs.script-file }}'
       - name: Deploy the web application
         run: echo 'Deploying the web application...'
