@@ -12,7 +12,4 @@ jobs:
         with:
           mode: minimum
           count: 1
-          labels: 
-            - "bug"
-            - "feature"
-            - "documentation"
+          labels: "bug,feature,documentation"
