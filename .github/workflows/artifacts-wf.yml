@@ -33,19 +33,21 @@ jobs:
         run: npm install
       - name: Build the project
         run: npm run build
+      - name: Upload the build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist-files
+          path: dist
 
   deploy-webapp-job:
     needs: build-code-job
     runs-on: ubuntu-latest
     steps:    
-      - name: Checkout code
-        uses: actions/checkout@v7
-      - name: Install Node js Latest
-        uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
+      - name: download artifacts
+        uses: actions/download-artifact@v7
+        with: 
+          name: dist-files
+      - name: Output the downloaded files
+        run: ls -l dist-files
       - name: Deploy the web application
         run: echo 'Deploying the web application...'
