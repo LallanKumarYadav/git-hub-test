@@ -48,6 +48,6 @@ jobs:
         with: 
           name: dist-files
       - name: Output the downloaded files
-        run: ls -l dist-files
+        run: ls -l
       - name: Deploy the web application
         run: echo 'Deploying the web application...'
