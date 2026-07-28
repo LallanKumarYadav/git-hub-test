@@ -1,5 +1,8 @@
 name: Events Test
-on:  [push, pull_request]
+on:
+  pull_request:
+    types:
+      - closed
 jobs:
   deploy-job:
    runs-on: ubuntu-latest
